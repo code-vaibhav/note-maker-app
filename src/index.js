@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import configureStore from "./store/configureStore";
+require('dotenv').config();
 
 const store = configureStore();
 

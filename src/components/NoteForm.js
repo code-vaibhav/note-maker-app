@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
 import {v4 as uuidv4} from 'uuid'; 
 
 function NoteForm({note, onSubmit}) {
