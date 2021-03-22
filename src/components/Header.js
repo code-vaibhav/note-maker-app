@@ -7,7 +7,6 @@ function Header() {
       <h1>Note-maker</h1>
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/create'>Add Note</NavLink>
-      <NavLink to='/edit'>Edit Note</NavLink>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import NoteForm from "../components/NoteForm";
-import { addNote } from '../actions/notes';
+import { startAddNote } from '../actions/notes';
 
 function CreatePage({addNote, history}) {
   const onSubmit = (note) => {
@@ -17,7 +17,7 @@ function CreatePage({addNote, history}) {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addNote: (note) => dispatch(addNote(note))
+  addNote: (note) => dispatch(startAddNote(note))
 })
 
 export default connect(null, mapDispatchToProps)(CreatePage);

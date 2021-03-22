@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import {v4 as uuidv4} from 'uuid'; 
+import React, { useState } from "react"; 
 
 function NoteForm({note, onSubmit}) {
   const [title, setTitle] = useState(note ? note.title : "");
@@ -8,7 +7,7 @@ function NoteForm({note, onSubmit}) {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    const noteData = {id: uuidv4(), title, description, category}
+    const noteData = {title, description, category}
     onSubmit(noteData);
   }
 

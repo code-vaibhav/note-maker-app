@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { editNote, deleteNote } from '../actions/notes'
+import { startEditNote, startDeleteNote } from '../actions/notes'
 import NoteForm from '../components/NoteForm'
 
 function EditPage(props) {
@@ -23,8 +23,8 @@ const mapStateToProps = (state, props) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  editNote: (id, updates) => dispatch(editNote(id, updates)),
-  deleteNote: (id) => dispatch(deleteNote(id))
+  editNote: (id, updates) => dispatch(startEditNote(id, updates)),
+  deleteNote: (id) => dispatch(startDeleteNote(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditPage);
